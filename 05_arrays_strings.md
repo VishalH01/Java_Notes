@@ -70,12 +70,12 @@ To solve this, Java has **`StringBuilder`**. It's like a whiteboard where you ca
 
 ## 📖 Key Definitions
 
-* **Array**: A container object that holds a fixed number of values of a single data type, where elements are accessed via 0-based index numbers.
-* **String**: An object representing a sequence of character values that is immutable (cannot be modified after creation).
-* **String Constant Pool**: A special storage area inside the Java Heap memory that stores unique literal String values to optimize memory consumption.
-* **Immutability**: The design property of an object (like `String`) which guarantees its state cannot be modified after it is created.
-* **StringBuilder**: A mutable sequence of characters used to efficiently build and modify strings within a single thread.
-* **StringBuffer**: A thread-safe, synchronized, mutable sequence of characters used to safely modify text across multiple threads.
+* **Array**: A fixed-size container that stores multiple elements of the same data type in a numbered sequence.
+* **String**: An object representing a sequence of characters that is immutable (cannot be modified after it is created).
+* **String Constant Pool**: A special storage area in memory where Java recycles unique literal String values to save space.
+* **Immutability**: A property of an object (like `String`) which guarantees its value cannot be altered or modified after creation.
+* **StringBuilder**: A class used to build and modify text mutable strings quickly in single-threaded programs.
+* **StringBuffer**: A thread-safe class used to modify mutable strings safely across multiple threads.
 
 ---
 

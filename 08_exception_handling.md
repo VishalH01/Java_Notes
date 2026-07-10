@@ -75,12 +75,12 @@ try (BufferedReader br = new BufferedReader(new FileReader("diary.txt"))) {
 
 ## 📖 Key Definitions
 
-* **Exception**: An abnormal event or condition that occurs during program execution and disrupts the normal flow of instructions.
-* **Error**: A serious system-level problem (subclass of `Throwable`) indicating a fatal failure that applications should not attempt to catch (e.g., `OutOfMemoryError`).
-* **Checked Exception**: An exception checked at compile-time that a program must actively handle or declare in its method signature using the `throws` keyword.
-* **Unchecked Exception (Runtime Exception)**: An exception that occurs at runtime, typically representing programming logic flaws (e.g., `NullPointerException`), which does not require compiler enforcement to catch.
-* **Try-with-Resources**: A resource management control structure introduced in Java 7 that automatically closes resources (implementing `AutoCloseable`) when the associated try block terminates.
-* **Throw vs. Throws**: `throw` is an active statement used to explicitly throw a single exception instance, whereas `throws` is a keyword used in method signatures to declare that a method may raise specified exceptions.
+* **Exception**: An unexpected event during program execution that disrupts the normal flow of instructions.
+* **Error**: A severe, system-level problem (like out-of-memory) that an application cannot recover from.
+* **Checked Exception**: An exception checked at compile-time that the compiler forces you to handle using try-catch or `throws`.
+* **Unchecked Exception**: A runtime exception (like NullPointerException) that happens due to logic mistakes and is not checked by the compiler.
+* **Try-with-Resources**: A try block that automatically closes and cleans up resources (like files) when the block is finished.
+* **Throw vs. Throws**: `throw` is used to actively trigger an exception instance, while `throws` is used in a method signature to warn callers.
 
 ---
 

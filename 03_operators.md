@@ -71,12 +71,12 @@ A tiny, one-line decision maker:
 
 ## 📖 Key Definitions
 
-* **Operator**: A special symbol that performs operations on one, two, or three operands and returns a result.
-* **Operand**: The target variable, constant, or value upon which an operator acts (e.g., in `a + b`, `a` and `b` are operands).
-* **Modulo Operator (`%`)**: An arithmetic operator that divides one operand by another and returns the remainder of the integer division.
-* **Logical Operators**: Operators (like `&&`, `||`, `!`) that evaluate boolean expressions and implement logical conjunction, disjunction, and negation.
-* **Bitwise Operators**: Operators that manipulate individual bits of binary numbers at a low level.
-* **Ternary Operator**: The conditional operator `? :` that evaluates a boolean condition and returns one of two values based on the truth value of the expression, acting as a shorthand for simple `if-else` blocks.
+* **Operator**: A special symbol (like `+` or `&&`) used to perform mathematical or logical calculations on values.
+* **Operand**: The target values or variables that are being acted on by an operator (e.g., in `x + y`, `x` and `y` are the operands).
+* **Modulo Operator (`%`)**: An arithmetic operator that divides one number by another and returns only the leftover remainder.
+* **Logical Operators**: Operators (like `&&` and `||`) used to combine multiple true/false conditions and return a single true/false result.
+* **Bitwise Operators**: Operators that manipulate the individual binary digits (0s and 1s) of a number.
+* **Ternary Operator**: A short, one-line conditional operator `? :` that acts as a shorthand for a simple `if-else` statement.
 
 ---
 

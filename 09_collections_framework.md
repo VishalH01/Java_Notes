@@ -71,14 +71,14 @@ How do we sort toys?
 
 ## 📖 Key Definitions
 
-* **Java Collections Framework**: A unified architecture containing interfaces, implementations (classes), and algorithms used to store and manipulate groups of objects.
-* **List**: An ordered collection (also called a sequence) that can contain duplicate elements, allowing precise control over where elements are inserted.
-* **Set**: A collection that cannot contain duplicate elements, modeling the mathematical set abstraction.
-* **Map**: An object that maps unique keys to values, where each key can map to at most one value.
-* **Queue**: A collection designed for holding elements prior to processing, typically ordering elements in a FIFO (First-in, First-out) manner.
-* **Iterator**: An object that implements the `Iterator` interface, used to traverse sequentially through elements of a Collection.
-* **Comparable**: An interface specifying a single method `compareTo()`, used to define the natural ordering of objects of a class.
-* **Comparator**: An interface specifying a method `compare()`, used to define custom sorting behaviors outside the target class's implementation.
+* **Java Collections Framework**: A set of classes and interfaces that help store, organize, and manipulate groups of objects.
+* **List**: An ordered collection that allows duplicate elements and lets you access elements by their index position.
+* **Set**: An unordered collection that does not allow duplicate elements, ensuring all items are unique.
+* **Map**: An object that stores key-value pairs, where each unique key maps to exactly one value.
+* **Queue**: A collection designed to hold elements in a specific order (typically first-in, first-out) before processing.
+* **Iterator**: An object used to walk through the elements of a collection one by one.
+* **Comparable**: An interface used to define the natural sorting order of a class (using the `compareTo` method).
+* **Comparator**: An interface used to define a custom sorting order for objects outside their own class (using the `compare` method).
 
 ---
 

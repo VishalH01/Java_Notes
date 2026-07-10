@@ -44,13 +44,13 @@ Tools that manage your project dependencies (other libraries you want to use) an
 
 ## 📖 Key Definitions
 
-* **JDBC (Java Database Connectivity)**: A standard Java API that defines how a Java application can access and interact with relational databases.
-* **SQL Injection**: A security vulnerability where malicious SQL commands are inserted into input fields, manipulating raw SQL statements executed by a database.
-* **Reflection API**: A Java API that allows an executing program to examine or modify the runtime behavior, structure, and metadata of classes, fields, and methods.
-* **Design Pattern**: A reusable, structured solution template to a commonly occurring design problem within a given context in software engineering.
-* **Singleton Pattern**: A design pattern that restricts the instantiation of a class to one "single" instance and provides a global point of access to it.
-* **Builder Pattern**: A creational design pattern that separates the construction of a complex object from its representation, allowing step-by-step construction.
-* **Build Tool**: A utility tool (like Maven or Gradle) that automates the process of compiling source code, managing dependencies, packaging code, and running tests.
+* **JDBC**: A Java API that connects Java programs to relational databases to execute SQL commands.
+* **SQL Injection**: A security hack where malicious SQL commands are typed into input fields to manipulate database queries.
+* **Reflection API**: A Java API that allows a program to inspect and modify classes, methods, and fields at runtime.
+* **Design Pattern**: A proven, reusable solution template to a common software design problem.
+* **Singleton Pattern**: A design pattern that ensures a class has only one active instance in the entire program.
+* **Builder Pattern**: A pattern that lets you construct a complex object step-by-step using method chaining.
+* **Build Tool**: A tool (like Maven or Gradle) that automates project tasks like downloading libraries, running tests, and compiling code.
 
 ---
 

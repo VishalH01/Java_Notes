@@ -88,12 +88,12 @@ In Java, we achieve this using:
 
 ## 📖 Key Definitions
 
-* **Encapsulation**: The wrapping of data (variables) and code (methods) into a single unit, and restricting direct access to object components (data hiding) using access modifiers and getters/setters.
-* **Inheritance**: The mechanism by which one class acquires the properties and behaviors (fields and methods) of another class, facilitating code reusability.
-* **Polymorphism**: The ability of an object, method, or reference to take on multiple forms, enabling dynamic method binding at runtime (method overriding) or static binding at compile-time (method overloading).
-* **Abstraction**: The process of hiding implementation details from the user and showing only the essential features or interfaces of an object.
-* **Abstract Class**: A class declared with the `abstract` keyword that cannot be instantiated and may contain abstract methods that subclasses must implement.
-* **Interface**: A reference type in Java that acts as a formal contract specifying a set of method signatures that implementing classes must implement.
+* **Encapsulation**: Guarding sensitive data by making variables private and providing access only through public getters and setters.
+* **Inheritance**: A mechanism that lets a child class borrow the fields and methods of a parent class.
+* **Polymorphism**: The ability of a method or object to behave differently in different situations (like overriding or overloading).
+* **Abstraction**: Hiding complex internal execution details and exposing only the essential features to the user.
+* **Abstract Class**: A class that cannot be instantiated and is meant to be extended, serving as a partial blueprint.
+* **Interface**: A formal contract specifying a set of method signatures that implementing classes must define.
 
 ---
 

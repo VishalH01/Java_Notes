@@ -59,12 +59,12 @@ Java has an automatic **Garbage Collector (GC)**. It's a friendly trash truck th
 
 ## 📖 Key Definitions
 
-* **Object-Oriented Programming (OOP)**: A programming paradigm centered around the concept of objects, which contain data (attributes/fields) and code (methods/behaviors).
-* **Class**: A user-defined template or blueprint from which individual objects are created.
-* **Object (Instance)**: A concrete instance of a class that exists in memory and contains its own copy of instance variables.
-* **Constructor**: A special method block executed automatically when an object is instantiated, used to initialize the object's state.
-* **Static Keyword**: A modifier indicating that a member (field or method) belongs to the class itself, rather than to any specific instance of the class.
-* **Garbage Collection (GC)**: The automatic process in the JVM that reclaims memory occupied by objects that are no longer referenced by the program.
+* **Object-Oriented Programming (OOP)**: A programming style based on the concept of "objects" that contain data (fields) and code (methods).
+* **Class**: A user-defined blueprint or template used to create individual objects.
+* **Object (Instance)**: A concrete, real-world entity created from a class blueprint that lives in the computer's memory.
+* **Constructor**: A special block of code that is executed automatically to initialize an object when it is created.
+* **Static Keyword**: A modifier indicating that a variable or method belongs directly to the class, rather than to class instances.
+* **Garbage Collection (GC)**: An automatic memory management process in Java that deletes unused objects to free up space.
 
 ---
 

@@ -92,12 +92,12 @@ This means at runtime, all generic boxes look like ordinary boxes holding `Objec
 
 ## 📖 Key Definitions
 
-* **Wrapper Classes**: Classes corresponding to primitive data types that wrap primitive values in an object structure, facilitating their use in Object-Oriented APIs like the Collections Framework.
-* **Autoboxing**: The automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
-* **Unboxing**: The automatic conversion that the Java compiler makes from an object wrapper class back to its corresponding primitive type.
-* **Generics**: A feature introduced in Java 5 that enables types (classes and interfaces) to be parameterized when defined, providing compile-time type safety.
-* **Wildcard (`?`)**: A special type argument in generics that represents an unknown type, allowing flexibility in parameterized collections.
-* **Type Erasure**: A compiler procedure that removes all generic type parameter information at compile time, translating generic types into raw type representations in the resulting bytecode.
+* **Wrapper Classes**: Object classes corresponding to primitive types (like `Integer` for `int`), allowing primitives to be used in generic collections.
+* **Autoboxing**: The automatic conversion that the Java compiler makes between a primitive type and its wrapper class.
+* **Unboxing**: The automatic conversion that the Java compiler makes from a wrapper class back to its primitive type.
+* **Generics**: A feature that lets you add type parameters (like `<String>`) to classes and methods to ensure compile-time type safety.
+* **Wildcard (`?`)**: A special question-mark type argument in generics that represents an unknown type, adding flexibility.
+* **Type Erasure**: The process where the compiler removes all generic type parameter information at compile time to maintain backward compatibility.
 
 ---
 

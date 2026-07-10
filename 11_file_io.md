@@ -43,14 +43,14 @@ graph LR
 
 ## 📖 Key Definitions
 
-* **File I/O (Input/Output)**: The system of reading data from external files (Input) and writing data out to files (Output) on a physical disk storage.
-* **Stream**: An abstraction in Java representing a continuous sequence of data flowing from a source (Input Stream) to a destination (Output Stream).
-* **Byte Stream**: A stream that reads or writes data 8 bits (one byte) at a time, implemented by subclasses of `InputStream` and `OutputStream` (e.g., for binary data like images).
-* **Character Stream**: A stream designed for reading or writing text data 16-bit characters at a time, implemented by subclasses of `Reader` and `Writer`.
-* **Buffered Stream**: An optimized wrapper stream that uses a memory buffer to accumulate data, reducing the number of costly system-level read/write interactions with the physical disk.
-* **Serialization**: The process of translating a live Java object state into a binary format (byte stream) so it can be written to disk or transmitted over a network.
-* **Deserialization**: The reverse process of serialization, reconstructing a live Java object in memory from a saved binary byte stream.
-* **Transient Keyword**: A field modifier indicating that a variable should not be serialized when the enclosing object class is written to an output stream.
+* **File I/O**: The process of reading information from external files (Input) or writing information down into files (Output).
+* **Stream**: An abstraction representing a continuous flow of data from a source to a destination.
+* **Byte Stream**: A stream that reads or writes data one byte (8 bits) at a time, used for binary files like images.
+* **Character Stream**: A stream designed to read or write text data 16-bit characters at a time.
+* **Buffered Stream**: A wrapper stream that uses memory buffering to read/write data in chunks, making operations faster.
+* **Serialization**: The process of converting a live Java object into a binary byte stream so it can be saved to a file or sent over a network.
+* **Deserialization**: The process of reconstructing a live Java object in memory from a saved binary byte stream.
+* **Transient Keyword**: A variable modifier that tells Java not to save it during the serialization process.
 
 ---
 

@@ -90,12 +90,12 @@ for (int jacks = 1; jacks <= 10; jacks++) {
 
 ## 📖 Key Definitions
 
-* **Control Flow**: The order in which individual statements, instructions, or function calls of an imperative program are executed or evaluated.
-* **Conditional Statements**: Control structures (such as `if-else` or `switch`) that direct program execution along different paths based on the truth value of a condition.
-* **Switch Expression**: A modern version of the switch statement introduced in Java 14 that can evaluate to a single value, uses arrow `->` syntax, and does not require explicit `break` statements.
-* **Loop (Iteration)**: A control structure that repeatedly executes a block of code as long as a specified condition remains true.
-* **Break Statement**: A control statement that terminates the execution of a loop or switch structure immediately, passing control to the statement following the loop or switch.
-* **Continue Statement**: A control statement that skips the remaining statements in the current iteration of a loop and triggers the evaluation of the loop's condition for the next cycle.
+* **Control Flow**: The order in which individual lines of code or instructions are read and executed by the computer.
+* **Conditional Statements**: Control structures (like `if-else` and `switch`) that execute different blocks of code based on a true/false condition.
+* **Switch Expression**: A modern version of the switch statement that can directly return a value and does not require a `break` statement.
+* **Loop**: A control structure that repeatedly executes a block of code as long as a specified condition remains true.
+* **Break Statement**: A command used to instantly exit a loop or switch block.
+* **Continue Statement**: A command used to skip the rest of the current loop iteration and jump straight to the next cycle.
 
 ---
 

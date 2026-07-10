@@ -51,6 +51,14 @@ If you want to build new toys, you need tools like hammers, screwdrivers, and pa
 
 When you write Java code, you save it in a file ending in `.java`. Before the computer can run it, it must go through two steps:
 
+```mermaid
+flowchart TD
+    A[Source Code: HelloWorld.java] -->|javac Compiler| B[Bytecode: HelloWorld.class]
+    B --> C[JVM: Java Virtual Machine]
+    C -->|Dynamic Translation| D[Machine Code: 0s & 1s]
+    D --> E[Computer Execution]
+```
+
 1. **Compiling**: A tool called `javac` (Java Compiler) translates your `.java` file into a secret code called **Bytecode** (saved as a `.class` file). Think of bytecode as a universal secret language that only JVMs understand.
 2. **Running**: The JVM reads this secret `.class` file and translates it on the spot into the computer's native "beep-boop" language.
 
@@ -60,11 +68,11 @@ This is why Java is famous for **"Write Once, Run Anywhere" (WORA)**. Whether yo
 
 ## 📖 Key Definitions
 
-* **Java**: A high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible, allowing code to run on any device supporting the Java Virtual Machine.
-* **JVM (Java Virtual Machine)**: An abstract computing machine that provides the runtime environment in which Java bytecode can be executed on a target physical device.
-* **JRE (Java Runtime Environment)**: A software package that bundles the JVM, core class libraries, and other components required to run Java applications.
-* **JDK (Java Development Kit)**: A full software development environment that includes the JRE, compiler (`javac`), debugger, and other tools needed to write, build, and run Java code.
-* **Compilation**: The process of translating human-readable Java source code (`.java` files) into platform-independent Bytecode (`.class` files) using the compiler tool `javac`.
+* **Java**: A secure, class-based, object-oriented programming language designed to let developers "write once, run anywhere."
+* **JVM (Java Virtual Machine)**: An engine that runs Java code on your computer by translating Java bytecode into machine instructions.
+* **JRE (Java Runtime Environment)**: A software package that contains the JVM and core libraries needed to run Java applications.
+* **JDK (Java Development Kit)**: A complete toolkit for developers that contains the JRE, the Java compiler (`javac`), and other tools to write and build Java code.
+* **Compilation**: The process of translating human-readable Java source code (`.java`) into bytecode (`.class`) that the JVM can execute.
 
 ---
 

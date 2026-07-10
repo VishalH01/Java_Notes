@@ -49,13 +49,13 @@ An **`Optional<T>`** is a gift box. You check if there is a toy inside using `.i
 
 ## 📖 Key Definitions
 
-* **Lambda Expression**: An anonymous function (a function without a name) that can be passed around as a value and executed on demand, introducing functional programming syntax to Java.
-* **Functional Interface**: An interface that declares exactly one abstract method (annotated with `@FunctionalInterface`), which can be instantiated using a lambda expression or method reference.
-* **Stream API**: A pipeline of computational steps introduced in Java 8 that processes sequences of elements (collections) in a declarative, functional manner.
-* **Optional**: A container object (introduced in Java 8) which may or may not contain a non-null value, designed to prevent developer reliance on `null` values and prevent runtime `NullPointerException`s.
-* **Local Variable Type Inference (`var`)**: A feature introduced in Java 10 that allows the compiler to infer the data type of a local variable based on its initializer value.
-* **Record**: A special restricted class type introduced in Java 16 designed to act as an immutable, boilerplate-free data carrier.
-* **Sealed Class**: A class or interface introduced in Java 17 that restricts which other classes or interfaces may extend or implement it.
+* **Lambda Expression**: An anonymous function (a method without a name) that can be passed around as a parameter.
+* **Functional Interface**: An interface that contains exactly one abstract method, which can be implemented using a lambda.
+* **Stream API**: A tool introduced in Java 8 used to process collections of elements step-by-step in a declarative way.
+* **Optional**: A container class that may or may not hold a value, used to prevent NullPointerExceptions.
+* **Local Variable Type Inference (`var`)**: A feature that lets the compiler guess the type of a local variable based on its value.
+* **Record**: A read-only class introduced in Java 16 designed to act as an immutable data carrier without boilerplate code.
+* **Sealed Class**: A class or interface that controls exactly which other classes are allowed to extend or implement it.
 
 ---
 

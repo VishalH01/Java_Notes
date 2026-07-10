@@ -76,13 +76,13 @@ Instead, we hire a permanent team of 4 elves (a **Thread Pool**) and a manager (
 
 ## 📖 Key Definitions
 
-* **Thread**: The smallest unit of execution within a process, representing a single path of code execution.
-* **Multithreading**: A computer architecture or software design capability that allows an application to run multiple concurrent threads of execution simultaneously.
-* **Race Condition**: A concurrency defect where the output of a program is dependent on the non-deterministic timing or execution order of multiple threads accessing shared resources.
-* **Thread Safety**: A property of code indicating that it behaves correctly and maintains state integrity when executed concurrently by multiple threads.
-* **Synchronized Keyword**: A Java keyword used to declare critical sections (methods or blocks) that require a thread to acquire a mutual exclusion lock before execution.
-* **Volatile Keyword**: A field modifier indicating that writes to a variable must be made immediately visible to other threads, bypassing local thread caches.
-* **Executor Service**: A framework interface introduced in Java 5 that manages thread execution, pooling, and scheduling, decoupling task submission from thread management.
+* **Thread**: The smallest unit of execution inside a program representing a single path of code execution.
+* **Multithreading**: The ability of a program to execute multiple threads concurrently to perform tasks in parallel.
+* **Race Condition**: A concurrency bug where multiple threads try to update the same shared resource at once, causing incorrect results.
+* **Thread Safety**: A property of code indicating that it behaves correctly and maintains data consistency when run by multiple threads concurrently.
+* **Synchronized Keyword**: A locking mechanism that ensures only one thread can execute a block of code or method at a time.
+* **Volatile Keyword**: A field modifier that guarantees writes to a variable are immediately visible to all other threads.
+* **Executor Service**: A framework used to manage and execute threads using a reusable pool of workers.
 
 ---
 

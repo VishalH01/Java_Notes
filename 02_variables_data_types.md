@@ -75,11 +75,11 @@ final int BIRTH_YEAR = 2021; // This box can NEVER be changed!
 
 ## 📖 Key Definitions
 
-* **Variable**: A designated storage location in the computer's memory mapped to a user-defined name (identifier) that holds a value during program execution.
-* **Primitive Data Types**: The eight basic built-in data types in Java (`byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`) that represent raw, predefined values directly in memory rather than complex object references.
-* **Reference Data Types**: Types that store the memory address of an object (like `String` or array references) rather than the actual values themselves.
-* **Type Casting**: The process of converting a variable from one data type to another, either implicitly (widening) or explicitly (narrowing).
-* **Constant**: A variable declared with the `final` keyword whose value cannot be reassigned or modified once initialized.
+* **Variable**: A named memory location used to store a specific type of data during program execution.
+* **Primitive Data Types**: Basic data types built into Java (like `int` and `boolean`) that store raw values directly in memory.
+* **Reference Data Types**: Data types that store the memory address of an object (like `String` or arrays) rather than the actual values.
+* **Type Casting**: The process of converting a variable from one data type to another (either widening automatically or narrowing manually).
+* **Constant**: A variable declared with the `final` keyword whose value cannot be reassigned or changed once set.
 
 ---
 
