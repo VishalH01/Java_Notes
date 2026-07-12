@@ -268,3 +268,9 @@ public class AdvancedDemo {
 50. **What is ClassLoader Isolation in application servers?**
     * *Answer*: A technique where application servers create independent classloader instances for different deployed applications. This prevents Class A in App 1 from conflicting with Class A in App 2, even if they use different versions of the same library.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 13: Super Power Upgrades (Java 8 to 21)](13_java8_features.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

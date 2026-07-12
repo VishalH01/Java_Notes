@@ -248,3 +248,10 @@ public class ArraysStringsDemo {
 50. **What is the performance difference between `System.arraycopy()` and looping to copy arrays?**
     * *Answer*: `System.arraycopy()` is a native method (written in C/C++) that performs direct memory block transfers (`memcpy` or `memmove`), making it significantly faster than looping elements in Java bytecode.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 04: Traffic Lights & Circles (Control Flow)](04_control_flow.md)
+* **Next Chapter**: [👉 Topic 06: Blueprints & Buildings (OOP Basics)](06_oop_basics.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

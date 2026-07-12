@@ -247,3 +247,10 @@ public class OperatorsDemo {
 50. **What is constant folding optimization in Java compilers?**
     * *Answer*: A compiler optimization technique where expressions containing only literal operands (e.g., `int x = 2 * 300;`) are evaluated at compile-time and replaced directly with their results (e.g., `int x = 600;`) in the bytecode.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 02: Toy Boxes (Variables & Data Types)](02_variables_data_types.md)
+* **Next Chapter**: [👉 Topic 04: Traffic Lights & Circles (Control Flow)](04_control_flow.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

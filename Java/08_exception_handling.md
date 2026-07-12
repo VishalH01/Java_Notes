@@ -259,3 +259,10 @@ public class ExceptionDemo {
 50. **What is the difference between Checked and Unchecked exceptions at the bytecode level?**
     * *Answer*: At the JVM bytecode level, there is **no difference** between checked and unchecked exceptions. The distinction is strictly enforced by the Java language compiler (`javac`) during syntax validation.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 07: The Four Pillars of OOP](07_oop_pillars.md)
+* **Next Chapter**: [👉 Topic 09: Super Bags (Collections Framework)](09_collections_framework.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

@@ -251,3 +251,10 @@ public class FileIODemo {
 50. **What is the difference between direct and non-direct ByteBuffers in Java NIO?**
     * *Answer*: Non-direct buffers are allocated inside the JVM heap; direct buffers are allocated in native system memory outside the garbage collector's scope, bypassing GC copy overhead but incurring higher allocation costs.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 10: Special Labeled Boxes (Generics & Wrappers)](10_generics_wrappers.md)
+* **Next Chapter**: [👉 Topic 12: Many Helpers (Multithreading & Concurrency)](12_multithreading_concurrency.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

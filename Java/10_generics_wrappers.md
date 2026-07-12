@@ -279,3 +279,10 @@ public class GenericsDemo {
 50. **What is the difference between raw type wildcard `<?>` and unbounded type parameter `<T>`?**
     * *Answer*: `<?>` represents a completely read-only representation where the type is anonymous and cannot be used to declare local variables in the method body. `<T>` declares a formal type variable that can be used to read, write, and reference the type repeatedly within the method.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 09: Super Bags (Collections Framework)](09_collections_framework.md)
+* **Next Chapter**: [👉 Topic 11: Reading & Writing (File I/O & Serialization)](11_file_io.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

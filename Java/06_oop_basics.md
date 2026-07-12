@@ -256,3 +256,10 @@ public class Main {
 50. **What is the performance cost of object creation in high-frequency trading (HFT) systems?**
     * *Answer*: Instantaneous object creation causes GC pressure. High-allocation rate triggers frequent minor GC pauses (Stop-the-world events), which introduce execution latency. Such systems optimize code to be "GC-free" by recycling objects using **Object Pools**.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 05: Toy Racks & Word Chains (Arrays & Strings)](05_arrays_strings.md)
+* **Next Chapter**: [👉 Topic 07: The Four Pillars of OOP](07_oop_pillars.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

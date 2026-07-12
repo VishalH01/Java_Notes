@@ -274,3 +274,10 @@ public class ControlFlowDemo {
 50. **What is Loop-Invariant Code Motion (LICM)?**
     * *Answer*: A compiler optimization that identifies expressions inside a loop that do not change their value across iterations and moves them outside the loop to avoid redundant calculations.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 03: The Magic Wands (Operators)](03_operators.md)
+* **Next Chapter**: [👉 Topic 05: Toy Racks & Word Chains (Arrays & Strings)](05_arrays_strings.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

@@ -257,3 +257,10 @@ public class CollectionsDemo {
 50. **What is the difference between `HashMap` resize (rehash) behavior in Java 7 vs. Java 8?**
     * *Answer*: In Java 7, resizing re-evaluated bucket indices and inserted nodes at the head of the new list, which could reverse elements and cause infinite loops under concurrent access. In Java 8, it uses a stable "split-run" algorithm that preserves element order, avoiding infinite loops (though concurrency bugs still occur).
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 08: The Safety Net (Exception Handling)](08_exception_handling.md)
+* **Next Chapter**: [👉 Topic 10: Special Labeled Boxes (Generics & Wrappers)](10_generics_wrappers.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

@@ -297,3 +297,10 @@ public class PillarsDemo {
 50. **What is runtime type information (RTTI) and how does Java maintain it?**
     * *Answer*: The capability to query object types at runtime. The JVM maintains RTTI by embedding a reference to class metadata (an internal Class object reference) inside the object header of every object instance in the Heap.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 06: Blueprints & Buildings (OOP Basics)](06_oop_basics.md)
+* **Next Chapter**: [👉 Topic 08: The Safety Net (Exception Handling)](08_exception_handling.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

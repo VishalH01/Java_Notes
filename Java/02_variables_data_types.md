@@ -242,3 +242,10 @@ public class VariablesDemo {
 50. **What is the OutOfMemoryError in relation to variable allocation?**
     * *Answer*: It occurs when the JVM Heap space runs out of memory because references to objects are continuously stored in variables without being dereferenced, leaving the Garbage Collector unable to free memory.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 01: Welcome to Java!](01_introduction_to_java.md)
+* **Next Chapter**: [👉 Topic 03: The Magic Wands (Operators)](03_operators.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

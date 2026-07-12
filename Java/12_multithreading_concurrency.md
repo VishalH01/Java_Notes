@@ -305,3 +305,10 @@ public class MultithreadingDemo {
       * `CountDownLatch` blocks threads until a set of operations (counter reaches zero) completes (one-time use).
       * `CyclicBarrier` forces a set of threads to wait at a barrier point until all threads arrive before proceeding (reusable).
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 11: Reading & Writing (File I/O & Serialization)](11_file_io.md)
+* **Next Chapter**: [👉 Topic 13: Super Power Upgrades (Java 8 to 21)](13_java8_features.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

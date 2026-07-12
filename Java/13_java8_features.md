@@ -233,3 +233,10 @@ public class ModernJavaDemo {
 50. **What is the difference between stateless and stateful intermediate operations in Streams?**
     * *Answer*: Stateless operations (like `filter`, `map`) process elements independently without memory of other elements. Stateful operations (like `sorted`, `distinct`, `limit`) require knowledge of all elements in the stream before producing results, requiring internal buffering and degrading parallel performance.
 
+---
+
+## ⏭️ Next Steps
+
+* **Previous Chapter**: [👈 Topic 12: Many Helpers (Multithreading & Concurrency)](12_multithreading_concurrency.md)
+* **Next Chapter**: [👉 Topic 14: The Horizon (Advanced Overview)](14_advanced_topics.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)

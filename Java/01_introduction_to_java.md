@@ -245,3 +245,9 @@ public class HelloWorld {
 50. **What is GraalVM and how does it relate to Java?**
    * *Answer*: A high-performance polyglot JDK distribution that compiles Java bytecode into highly optimized native machine binaries (AOT) and supports running multiple languages (JavaScript, Python, C++, etc.) alongside Java.
 
+---
+
+## ⏭️ Next Steps
+
+* **Next Chapter**: [👉 Topic 02: Toy Boxes (Variables & Data Types)](02_variables_data_types.md)
+* **Roadmap Index**: [🏠 Back to Roadmap](README.md)
