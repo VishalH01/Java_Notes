@@ -1,6 +1,6 @@
 # 🎓 The Ultimate Java & Spring Boot Masterclass 🚀
 
-Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming**, the **Spring / Spring Boot** enterprise frameworks, and **SQL Relational Databases**. 
+Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming**, the **Spring / Spring Boot** enterprise frameworks, **SQL Relational Databases**, and **React JS Client-Side Development**. 
 
 Every single concept inside this repository is explained using **simple English, real-life analogies**, interactive **Code Sandboxes**, and exact **Interview-Ready definitions** so you can learn without ever needing to look at external sites or tutorials!
 
@@ -15,10 +15,12 @@ graph TD
     Root[The Masterclass Library] --> JavaTrack[Core & Advanced Java Path]
     Root --> SpringBootTrack[Spring & Spring Boot Path]
     Root --> SQLTrack[Database & SQL Path]
+    Root --> ReactTrack[React JS Frontend Path]
     
     click JavaTrack "Java/README.md" "Open Java Path"
     click SpringBootTrack "SpringBoot/README.md" "Open Spring Boot Path"
     click SQLTrack "SQL/README.md" "Open SQL Path"
+    click ReactTrack "React/README.md" "Open React Path"
 ```
 
 ---
@@ -101,11 +103,36 @@ graph TD
 
 ---
 
+## ⚛️ React JS Frontend Track
+
+*Build interactive, dynamic, and blazing-fast user interfaces using functional components.*
+
+### 🟢 Phase 1: Foundations
+- [ ] 🎬 **[Topic 01: Introduction to React & JSX](React/01_intro_to_react_jsx.md)** — Understand what React is, compile JSX, meet the Virtual DOM, and write declarative UI.
+- [ ] 📦 **[Topic 02: Components & Props](React/02_components_props.md)** — Write functional components, pass customization values (Props), and layout children props.
+
+### 🟡 Phase 2: Hooks & User Input
+- [ ] 🚦 **[Topic 03: State Management (useState)](React/03_state_management.md)** — Master internal component state, state setters, and batch rendering updates.
+- [ ] ⚡ **[Topic 04: Side Effects & useEffect](React/04_useeffect_side_effects.md)** — Fetch API data, execute side effects, and write cleanup functions to prevent memory leaks.
+- [ ] 🗂️ **[Topic 05: Lists, Keys & Conditionals](React/05_lists_keys_conditionals.md)** — Render array lists dynamically using `.map()`, check the importance of unique keys, and build conditional JSX branches.
+- [ ] ✍️ **[Topic 06: Forms & Event Handling (useRef)](React/06_forms_useref.md)** — Controlled vs Uncontrolled forms, handle Synthetic Events, and interact directly with DOM nodes using references.
+
+### 🟠 Phase 3: Global State & Performance
+- [ ] 🚀 **[Topic 07: Performance & Memoization](React/07_performance_memoization.md)** — Optimize UI speed using `React.memo` (component caching), `useMemo` (value caching), and `useCallback` (function reference caching).
+- [ ] 🔌 **[Topic 08: Context API & Prop Drilling](React/08_context_api.md)** — Broadcast global state down the component tree using Providers and read values cleanly using the `useContext` hook.
+
+### 🔴 Phase 4: Advanced Architecture & Production
+- [ ] 🌐 **[Topic 09: Routing & Custom Hooks](React/09_routing_custom_hooks.md)** — Build single-page navigations (`react-router-dom`), set up route guards, and encapsulate stateful logic in custom hooks.
+- [ ] 🏆 **[Topic 10: State Managers & Advanced Concepts](React/10_redux_toolkit_fiber.md)** — Centralize application state with Redux Toolkit slices, catch runtime exceptions with Error Boundaries, and explore the Fiber reconciler.
+
+---
+
 ## 💻 Practical Coding Interview Prep
 
 Sharpen your coding skills with step-by-step programming solutions and logic explanations:
-* ☕ **[Java Practical Coding Guide](Java/coding_interview_questions.md)** — Top 25 algorithms, lists, recursion, and stream API solutions.
-* 📊 **[SQL Practical Coding Guide](SQL/coding_interview_questions.md)** — Top 25 database query challenges, joins, CTEs, and window functions.
+* ☕ **[Java Practical Coding Guide](Java/coding_interview_questions.md)** — Top 50 algorithms, lists, recursion, and stream API solutions.
+* 📊 **[SQL Practical Coding Guide](SQL/coding_interview_questions.md)** — Top 50 database query challenges, joins, CTEs, and window functions.
+* ⚛️ **[React Practical Coding Guide](React/coding_interview_questions.md)** — Top 50 UI components, custom hooks, portal modals, and state utilities.
 
 ---
 
@@ -116,4 +143,5 @@ Sharpen your coding skills with step-by-step programming solutions and logic exp
 3. **💻 Code Sandbox**: Copy the code examples directly into your local IDE (e.g. IntelliJ or VS Code) to run them and experiment.
 4. **📖 Interview-Ready Definitions**: Study the definitions at the end of each file—they are optimized to be professional yet easy to say.
 5. **❓ Interview Prep**: Challenge yourself with the **50 questions** at the bottom of each file to verify your knowledge!
+
 
