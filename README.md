@@ -29,6 +29,10 @@ graph TD
 
 ## ☕ Core & Advanced Java Track
 
+<details>
+<summary><b>Click to expand Core & Advanced Java Course Catalog ☕</b></summary>
+<br/>
+
 *Go from absolute basics up to advanced platform features in Java.*
 
 ### 🟢 Phase 1: The Basics (The Playground Rules)
@@ -50,10 +54,15 @@ graph TD
 - [ ] 👥 **[Topic 12: Many Helpers (Multithreading & Concurrency)](Java/12_multithreading_concurrency.md)** — Hiring multiple workers to run tasks at the same time without bumping into each other.
 - [ ] ⚡ **[Topic 13: Super Power Upgrades (Java 8 to 21)](Java/13_java8_features.md)** — Writing shortcuts (Lambdas), using filters (Streams), and discovering modern patterns (Records, Sealed classes).
 - [ ] 🔮 **[Topic 14: The Horizon (Advanced Overview)](Java/14_advanced_topics.md)** — A sneak peek into Databases (JDBC), looking under the hood (Reflection), Build Managers (Maven/Gradle), and blueprints for patterns (Design Patterns).
+</details>
 
 ---
 
 ## 🍃 Spring & Spring Boot Track
+
+<details>
+<summary><b>Click to expand Spring & Spring Boot Course Catalog 🍃</b></summary>
+<br/>
 
 *Build enterprise-grade web applications, microservices, and secure APIs.*
 
@@ -78,10 +87,15 @@ graph TD
 - [ ] 🔋 **[Topic 12: Advanced Features & Caching](SpringBoot/12_actuator_scheduling_async.md)** — Monitor your system with Actuator, schedule recurring tasks (`@Scheduled`), run async threads (`@Async`), and configure **Caching with Redis**.
 - [ ] 🌐 **[Topic 13: Microservices Architecture & Resilience](SpringBoot/13_microservices_basics.md)** — Transition to microservices. Connect services via Eureka Registry, route traffic with API Gateway, communicate with Feign, and implement **Resilience4j Circuit Breakers** and **Distributed Tracing**.
 - [ ] 📦 **[Topic 14: Deployment, Containers, & Messaging](SpringBoot/14_spring_boot_deployment.md)** — Package apps (executable JAR), containerize with **Docker**, deploy to production, and integrate **Apache Kafka** for event-driven messaging.
+</details>
 
 ---
 
 ## 💛 JavaScript Core Track
+
+<details>
+<summary><b>Click to expand JavaScript Course Catalog 💛</b></summary>
+<br/>
 
 *Master the programming foundations of the web, DOM scripting, and async execution.*
 
@@ -102,10 +116,15 @@ graph TD
 ### 🔴 Phase 4: Web APIs & Engine Internals
 - [ ] 🌐 **[Topic 09: Fetch API & Web Storage](JavaScript/09_fetch_api_web_storage.md)** — Connect to servers using Fetch, and store local session states in `localStorage` and `sessionStorage`.
 - [ ] 🏆 **[Topic 10: The Event Loop & Memory Management](JavaScript/10_memory_event_loop_advanced.md)** — Look under the hood. Garbage collection heaps, and microtasks vs macrotasks scheduling.
+</details>
 
 ---
 
 ## 📊 Database & SQL Track
+
+<details>
+<summary><b>Click to expand Database & SQL Course Catalog 📊</b></summary>
+<br/>
 
 *Master Structured Query Language to read, write, and analyze database records.*
 
@@ -126,10 +145,15 @@ graph TD
 - [ ] 🚀 **[Topic 08: Indexes & Query Optimization](SQL/08_indexes_optimization.md)** — Write fast queries. Clustered vs Non-Clustered indexes, Query Execution Plans (EXPLAIN), and tuning query execution.
 - [ ] 🤖 **[Topic 09: Views, Stored Procedures & Triggers](SQL/09_views_procedures_triggers.md)** — Automate and reuse logic. Virtual tables (Views), callable routines (Procedures), and automated triggers.
 - [ ] 🏆 **[Topic 10: Window Functions](SQL/10_window_functions.md)** — Perform advanced analytics: `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `LEAD()`, `LAG()`, and cumulative running totals.
+</details>
 
 ---
 
 ## ⚛️ React JS Frontend Track
+
+<details>
+<summary><b>Click to expand React JS Course Catalog ⚛️</b></summary>
+<br/>
 
 *Build interactive, dynamic, and blazing-fast user interfaces using functional components.*
 
@@ -150,6 +174,7 @@ graph TD
 ### 🔴 Phase 4: Advanced Architecture & Production
 - [ ] 🌐 **[Topic 09: Routing & Custom Hooks](React/09_routing_custom_hooks.md)** — Build single-page navigations (`react-router-dom`), set up route guards, and encapsulate stateful logic in custom hooks.
 - [ ] 🏆 **[Topic 10: State Managers & Advanced Concepts](React/10_redux_toolkit_fiber.md)** — Centralize application state with Redux Toolkit slices, catch runtime exceptions with Error Boundaries, and explore the Fiber reconciler.
+</details>
 
 ---
 
@@ -161,7 +186,6 @@ Sharpen your coding skills with step-by-step programming solutions and logic exp
 * 📊 **[SQL Practical Coding Guide](SQL/coding_interview_questions.md)** — Top 50 database query challenges, joins, CTEs, and window functions.
 * ⚛️ **[React Practical Coding Guide](React/coding_interview_questions.md)** — Top 50 UI components, custom hooks, portal modals, and state utilities.
 
-
 ---
 
 ## 🎨 How to Use These Notes
@@ -171,5 +195,3 @@ Sharpen your coding skills with step-by-step programming solutions and logic exp
 3. **💻 Code Sandbox**: Copy the code examples directly into your local IDE (e.g. IntelliJ or VS Code) to run them and experiment.
 4. **📖 Interview-Ready Definitions**: Study the definitions at the end of each file—they are optimized to be professional yet easy to say.
 5. **❓ Interview Prep**: Challenge yourself with the **50 questions** at the bottom of each file to verify your knowledge!
-
-
