@@ -101,6 +101,14 @@ graph TD
 
 ---
 
+## 💻 Practical Coding Interview Prep
+
+Sharpen your coding skills with step-by-step programming solutions and logic explanations:
+* ☕ **[Java Practical Coding Guide](Java/coding_interview_questions.md)** — Top 25 algorithms, lists, recursion, and stream API solutions.
+* 📊 **[SQL Practical Coding Guide](SQL/coding_interview_questions.md)** — Top 25 database query challenges, joins, CTEs, and window functions.
+
+---
+
 ## 🎨 How to Use These Notes
 
 1. **👦 Analogies**: Start with the real-world analogy to grasp the concept in plain English.
@@ -108,3 +116,4 @@ graph TD
 3. **💻 Code Sandbox**: Copy the code examples directly into your local IDE (e.g. IntelliJ or VS Code) to run them and experiment.
 4. **📖 Interview-Ready Definitions**: Study the definitions at the end of each file—they are optimized to be professional yet easy to say.
 5. **❓ Interview Prep**: Challenge yourself with the **50 questions** at the bottom of each file to verify your knowledge!
+

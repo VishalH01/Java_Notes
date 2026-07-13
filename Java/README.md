@@ -32,6 +32,11 @@ Use this page as your dashboard. You can check off each topic as you complete it
 
 ---
 
+## 💻 Practical Coding Interview Prep
+Ready to test your coding skills? Open the **[Java Practical Coding Interview Guide](coding_interview_questions.md)** to practice 25 classic programming solutions with complete code walkthroughs and explanations.
+
+---
+
 ## 🎨 How These Notes Are Structured
 
 Each chapter contains:
@@ -47,3 +52,4 @@ Each chapter contains:
 > 3. Open your terminal and run `javac MyFirstProgram.java` to compile, and `java MyFirstProgram` to play!
 
 Let's begin this exciting journey! Open **[Topic 01: Welcome to Java!](01_introduction_to_java.md)** to get started!
+

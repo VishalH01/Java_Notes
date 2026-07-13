@@ -30,6 +30,11 @@ Use this list to navigate through the curriculum and track your progress:
 
 ---
 
+## 💻 Practical Coding Interview Prep
+Ready to test your query writing skills? Open the **[SQL Practical Coding Interview Guide](coding_interview_questions.md)** to practice 25 classic database query challenges with complete schema walkthroughs and explanations.
+
+---
+
 ## 🎨 Layout of Each Chapter
 
 1. 🏠 **Analogies**: Real-world scenarios representing database systems.
@@ -39,3 +44,4 @@ Use this list to navigate through the curriculum and track your progress:
 5. ❓ **50 Interview Questions**: Chronological, categorized lists of questions with complete answers.
 
 Let's begin! Open **[Topic 01: Introduction to Databases & SQL](01_intro_to_databases_sql.md)** to get started!
+
