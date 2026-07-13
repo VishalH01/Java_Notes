@@ -1,6 +1,6 @@
 # 🎓 The Ultimate Java & Spring Boot Masterclass 🚀
 
-Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming** and the **Spring / Spring Boot** enterprise frameworks. 
+Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming**, the **Spring / Spring Boot** enterprise frameworks, and **SQL Relational Databases**. 
 
 Every single concept inside this repository is explained using **simple English, real-life analogies**, interactive **Code Sandboxes**, and exact **Interview-Ready definitions** so you can learn without ever needing to look at external sites or tutorials!
 
@@ -14,9 +14,11 @@ Select one of the learning paths below, or click directly on any topic list belo
 graph TD
     Root[The Masterclass Library] --> JavaTrack[Core & Advanced Java Path]
     Root --> SpringBootTrack[Spring & Spring Boot Path]
+    Root --> SQLTrack[Database & SQL Path]
     
     click JavaTrack "Java/README.md" "Open Java Path"
     click SpringBootTrack "SpringBoot/README.md" "Open Spring Boot Path"
+    click SQLTrack "SQL/README.md" "Open SQL Path"
 ```
 
 ---
@@ -72,6 +74,30 @@ graph TD
 - [ ] 🔋 **[Topic 12: Advanced Features & Caching](SpringBoot/12_actuator_scheduling_async.md)** — Monitor your system with Actuator, schedule recurring tasks (`@Scheduled`), run async threads (`@Async`), and configure **Caching with Redis**.
 - [ ] 🌐 **[Topic 13: Microservices Architecture & Resilience](SpringBoot/13_microservices_basics.md)** — Transition to microservices. Connect services via Eureka Registry, route traffic with API Gateway, communicate with Feign, and implement **Resilience4j Circuit Breakers** and **Distributed Tracing**.
 - [ ] 📦 **[Topic 14: Deployment, Containers, & Messaging](SpringBoot/14_spring_boot_deployment.md)** — Package apps (executable JAR), containerize with **Docker**, deploy to production, and integrate **Apache Kafka** for event-driven messaging.
+
+---
+
+## 📊 Database & SQL Track
+
+*Master Structured Query Language to read, write, and analyze database records.*
+
+### 🟢 Phase 1: Basic Queries & Filtering
+- [ ] 🗃️ **[Topic 01: Introduction to Databases & SQL](SQL/01_intro_to_databases_sql.md)** — Relational databases vs NoSQL, RDBMS engines (MySQL, PostgreSQL, Oracle), SELECT, WHERE, and ORDER BY basics.
+- [ ] 🔍 **[Topic 02: Filtering & Pattern Matching](SQL/02_filtering_pattern_matching.md)** — AND, OR, NOT logic, IN, BETWEEN, LIKE (`%`, `_`), and checking for `NULL` values.
+
+### 🟡 Phase 2: Aggregation & Combining Data
+- [ ] ➕ **[Topic 03: Aggregation & Grouping](SQL/03_aggregation_grouping.md)** — Summarize data using `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, `GROUP BY`, and filtering groups using `HAVING` vs `WHERE`.
+- [ ] 🔗 **[Topic 04: Joins (Combining Tables)](SQL/04_joins_combining_tables.md)** — Connect tables. Inner Join, Left/Right/Full Outer Joins, Cross Joins, and Self Joins.
+
+### 🟠 Phase 3: Nested Queries & Modifications
+- [ ] 🧬 **[Topic 05: Subqueries & CTEs](SQL/05_subqueries_ctes.md)** — Scalar, multi-row, and correlated subqueries, and Common Table Expressions (CTEs) using the `WITH` clause.
+- [ ] ✍️ **[Topic 06: Data Modification (DML) & Transactions](SQL/06_dml_transactions.md)** — Modify data with `INSERT`, `UPDATE`, `DELETE`, and `TRUNCATE`. Learn transaction control: `COMMIT`, `ROLLBACK`, and ACID properties.
+
+### 🔴 Phase 4: Schema Design & Advanced Analysis
+- [ ] 🏗️ **[Topic 07: Table Design & Constraints (DDL)](SQL/07_ddl_constraints.md)** — Create tables with constraints (Primary Key, Foreign Key, UNIQUE, CHECK, NOT NULL, DEFAULT).
+- [ ] 🚀 **[Topic 08: Indexes & Query Optimization](SQL/08_indexes_optimization.md)** — Write fast queries. Clustered vs Non-Clustered indexes, Query Execution Plans (EXPLAIN), and tuning query execution.
+- [ ] 🤖 **[Topic 09: Views, Stored Procedures & Triggers](SQL/09_views_procedures_triggers.md)** — Automate and reuse logic. Virtual tables (Views), callable routines (Procedures), and automated triggers.
+- [ ] 🏆 **[Topic 10: Window Functions](SQL/10_window_functions.md)** — Perform advanced analytics: `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `LEAD()`, `LAG()`, and cumulative running totals.
 
 ---
 
