@@ -1,6 +1,6 @@
-# 🎓 The Ultimate Java & Spring Boot Masterclass 🚀
+# 🎓 The Ultimate Java, Spring Boot & Web Masterclass 🚀
 
-Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming**, the **Spring / Spring Boot** enterprise frameworks, **SQL Relational Databases**, and **React JS Client-Side Development**. 
+Welcome to your complete learning playground! This repository is your all-in-one resource for mastering **Java programming**, the **Spring / Spring Boot** enterprise frameworks, **JavaScript Programming**, **SQL Relational Databases**, and **React JS Client-Side Development**. 
 
 Every single concept inside this repository is explained using **simple English, real-life analogies**, interactive **Code Sandboxes**, and exact **Interview-Ready definitions** so you can learn without ever needing to look at external sites or tutorials!
 
@@ -14,11 +14,13 @@ Select one of the learning paths below, or click directly on any topic list belo
 graph TD
     Root[The Masterclass Library] --> JavaTrack[Core & Advanced Java Path]
     Root --> SpringBootTrack[Spring & Spring Boot Path]
+    Root --> JavaScriptTrack[JavaScript Core Path]
     Root --> SQLTrack[Database & SQL Path]
     Root --> ReactTrack[React JS Frontend Path]
     
     click JavaTrack "Java/README.md" "Open Java Path"
     click SpringBootTrack "SpringBoot/README.md" "Open Spring Boot Path"
+    click JavaScriptTrack "JavaScript/README.md" "Open JavaScript Path"
     click SQLTrack "SQL/README.md" "Open SQL Path"
     click ReactTrack "React/README.md" "Open React Path"
 ```
@@ -79,6 +81,30 @@ graph TD
 
 ---
 
+## 💛 JavaScript Core Track
+
+*Master the programming foundations of the web, DOM scripting, and async execution.*
+
+### 🟢 Phase 1: Basics & Syntax
+- [ ] 🎬 **[Topic 01: Introduction to JavaScript & DOM Basics](JavaScript/01_intro_dom_basics.md)** — Meet JS engines (V8), write your first scripts, and select basic DOM elements.
+- [ ] 📦 **[Topic 02: Variables, Scope & Hoisting](JavaScript/02_variables_scope_hoisting.md)** — Compare `var`, `let`, and `const`, master block scope, and understand variable hoisting.
+- [ ] 🚦 **[Topic 03: Functions & Execution Context](JavaScript/03_functions_execution_context.md)** — Arrow functions, lexical scopes, the Call Stack, and the magic of Closures.
+
+### 🟡 Phase 2: Data Structures & Async
+- [ ] 🗃️ **[Topic 04: Objects, Arrays & Destructuring](JavaScript/04_objects_arrays_destructuring.md)** — Learn about prototypes, array helper methods (`map`, `filter`, `reduce`), and destructuring patterns.
+- [ ] ⚡ **[Topic 05: Asynchronous JS & Promises](JavaScript/05_async_promises_async_await.md)** — Escape callback hell. Promises lifecycle and `async`/`await` commands.
+
+### 🟠 Phase 3: Events & ES6+
+- [ ] 📡 **[Topic 06: DOM Events & Propagation](JavaScript/06_dom_events_propagation.md)** — Bubbling, capturing, event delegation, and dynamic DOM manipulation.
+- [ ] 🏗️ **[Topic 07: ES6+ Classes & Modules](JavaScript/07_es6_classes_modules.md)** — Object-Oriented JS, constructor functions, prototypes, and ES modules (`import`/`export`).
+- [ ] 🛡️ **[Topic 08: Error Handling & Strict Mode](JavaScript/08_error_handling_strict_mode.md)** — Catch runtime errors using `try-catch` blocks and enforce clean code rules with `"use strict"`.
+
+### 🔴 Phase 4: Web APIs & Engine Internals
+- [ ] 🌐 **[Topic 09: Fetch API & Web Storage](JavaScript/09_fetch_api_web_storage.md)** — Connect to servers using Fetch, and store local session states in `localStorage` and `sessionStorage`.
+- [ ] 🏆 **[Topic 10: The Event Loop & Memory Management](JavaScript/10_memory_event_loop_advanced.md)** — Look under the hood. Garbage collection heaps, and microtasks vs macrotasks scheduling.
+
+---
+
 ## 📊 Database & SQL Track
 
 *Master Structured Query Language to read, write, and analyze database records.*
@@ -131,8 +157,10 @@ graph TD
 
 Sharpen your coding skills with step-by-step programming solutions and logic explanations:
 * ☕ **[Java Practical Coding Guide](Java/coding_interview_questions.md)** — Top 50 algorithms, lists, recursion, and stream API solutions.
+* 💛 **[JavaScript Practical Coding Guide](JavaScript/coding_interview_questions.md)** — Top 50 function closures, async scheduling, custom promises, and prototype clones.
 * 📊 **[SQL Practical Coding Guide](SQL/coding_interview_questions.md)** — Top 50 database query challenges, joins, CTEs, and window functions.
 * ⚛️ **[React Practical Coding Guide](React/coding_interview_questions.md)** — Top 50 UI components, custom hooks, portal modals, and state utilities.
+
 
 ---
 
