@@ -1,6 +1,6 @@
 # ☕ Java Practical Coding Interview Guide
 
-Welcome, interview candidate! This guide compiles the **Top 25 most frequently asked Java coding questions** in technical interviews. Every question is solved using standard Java, accompanied by a line-by-line explanation in simple English and a Big-O complexity analysis.
+Welcome, interview candidate! This guide compiles the **Top 50 most frequently asked Java coding questions** in technical interviews. Every question is solved using standard Java, accompanied by a line-by-line explanation in simple English and a Big-O complexity analysis.
 
 ---
 
@@ -31,8 +31,34 @@ Welcome, interview candidate! This guide compiles the **Top 25 most frequently a
 23. [Java 8: Group names by length](#23-java-8-group-names-by-length)
 24. [Java 8: Find Maximum Value in a List](#24-java-8-find-maximum-value-in-a-list)
 25. [Java 8: Find Duplicate Numbers in a List](#25-java-8-find-duplicate-numbers-in-a-list)
+26. [Count Vowels and Consonants in a String](#26-count-vowels-and-consonants-in-a-string)
+27. [Check if a String Contains Only Digits](#27-check-if-a-string-contains-only-digits)
+28. [Find all Subsets of a Set (Power Set)](#28-find-all-subsets-of-a-set-power-set)
+29. [Find the First Repeating Element in an Array](#29-find-the-first-repeating-element-in-an-array)
+30. [Find the Intersection of Two Arrays](#30-find-the-intersection-of-two-arrays)
+31. [Move All Zeros to the End of an Array](#31-move-all-zeros-to-the-end-of-an-array)
+32. [Rotate an Array to the Right by K Steps](#32-rotate-an-array-to-the-right-by-k-steps)
+33. [Find the Majority Element in an Array (Boyer-Moore)](#33-find-the-majority-element-in-an-array-boyer-moore)
+34. [Container with Most Water](#34-container-with-most-water)
+35. [Valid Parentheses (Bracket Matching)](#35-valid-parentheses-bracket-matching)
+36. [Implement a Queue using Two Stacks](#36-implement-a-queue-using-two-stacks)
+37. [Merge Two Sorted Linked Lists](#37-merge-two-sorted-linked-lists)
+38. [Remove N-th Node from End of a Linked List](#38-remove-n-th-node-from-end-of-a-linked-list)
+39. [Find the Starting Node of a Cycle in a Linked List](#39-find-the-starting-node-of-a-cycle-in-a-linked-list)
+40. [Check if a Binary Tree is Balanced](#40-check-if-a-binary-tree-is-balanced)
+41. [Binary Tree Inorder Traversal (Iterative & Recursive)](#41-binary-tree-inorder-traversal-iterative-recursive)
+42. [Maximum Depth of a Binary Tree](#42-maximum-depth-of-a-binary-tree)
+43. [Lowest Common Ancestor (LCA) in a BST](#43-lowest-common-ancestor-lca-in-a-bst)
+44. [Dynamic Programming: Climbing Stairs](#44-dynamic-programming-climbing-stairs)
+45. [Implement a Custom Thread Pool Executor](#45-implement-a-custom-thread-pool-executor)
+46. [Java 8: Find the First Element of a Stream](#46-java-8-find-the-first-element-of-a-stream)
+47. [Java 8: Count Empty Strings in a List](#47-java-8-count-empty-strings-in-a-list)
+48. [Java 8: Convert Strings to Uppercase and Join with Commas](#48-java-8-convert-strings-to-uppercase-and-join-with-commas)
+49. [Java 8: Find all Numbers Starting with '1'](#49-java-8-find-all-numbers-starting-with-1)
+50. [Java 8: Find the Second Highest Number in a List](#50-java-8-find-the-second-highest-number-in-a-list)
 
 ---
+
 
 ## 💻 Coding Challenges & Solutions
 
@@ -690,7 +716,715 @@ public class StreamDuplicates {
 
 ---
 
+### 26. Count Vowels and Consonants in a String
+**Problem**: Count the number of vowels and consonants in a given string.
+```java
+public class CountVowelsConsonants {
+    public static void count(String str) {
+        if (str == null) return;
+        int vowels = 0, consonants = 0;
+        String temp = str.toLowerCase();
+        
+        for (int i = 0; i < temp.length(); i++) {
+            char ch = temp.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("Vowels: " + vowels + ", Consonants: " + consonants);
+    }
+}
+```
+* **Explanation**: We normalize the string to lowercase. We loop through all characters, verifying they fall inside standard alphabetical bounds (`a` to `z`). If yes, we check if the character matches `a, e, i, o, u` to count vowels; otherwise, we count it as a consonant.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 27. Check if a String Contains Only Digits
+**Problem**: Verify if a given string contains only numeric digits.
+```java
+public class OnlyDigits {
+    public static boolean check(String str) {
+        if (str == null || str.isEmpty()) return false;
+        
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false; // Found a non-digit character!
+            }
+        }
+        return true;
+    }
+}
+```
+* **Explanation**: We loop through each character in the string. We check if the character is a digit using Java's built-in `Character.isDigit()`. If any character fails this check, we return false immediately.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 28. Find all Subsets of a Set (Power Set)
+**Problem**: Generate all possible subsets (the Power Set) of a given set of integers.
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class PowerSet {
+    public static List<List<Integer>> getSubsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(result, new ArrayList<>(), nums, 0);
+        return result;
+    }
+
+    private static void backtrack(List<List<Integer>> result, List<Integer> temp, int[] nums, int start) {
+        result.add(new ArrayList<>(temp)); // Add current subset copy
+        
+        for (int i = start; i < nums.length; i++) {
+            temp.add(nums[i]);                     // Choose element
+            backtrack(result, temp, nums, i + 1);  // Recurse forward
+            temp.remove(temp.size() - 1);          // Undo choice (backtrack)
+        }
+    }
+}
+```
+* **Explanation**: We use Backtracking. We recursively construct subsets. In each step, we add the current selection list to the result, then loop from `start` to select the next element, call the function forward, and remove the last element to backtrack.
+* **Complexity**: Time: $O(2^N)$ (since a set of size $N$ has $2^N$ subsets), Space: $O(N)$ (recursion stack space).
+
+---
+
+### 29. Find the First Repeating Element in an Array
+**Problem**: Find the first element in an array that repeats, returning its value.
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+public class FirstRepeating {
+    public static int find(int[] nums) {
+        int minIndex = -1;
+        Set<Integer> visited = new HashSet<>();
+        
+        // Loop backward to find the earliest repeating occurrence!
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (visited.contains(nums[i])) {
+                minIndex = i; // Save index
+            } else {
+                visited.add(nums[i]);
+            }
+        }
+        return minIndex != -1 ? nums[minIndex] : -1;
+    }
+}
+```
+* **Explanation**: We loop through the array backward. We keep track of visited numbers in a `HashSet`. If we scan a number that is already in the set, we update `minIndex` with the current index. Scanning backward ensures that the earliest repeating element in the array is saved last.
+* **Complexity**: Time: $O(N)$, Space: $O(N)$.
+
+---
+
+### 30. Find the Intersection of Two Arrays
+**Problem**: Find common elements present in two arrays, returning only unique values.
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+public class Intersection {
+    public static int[] getIntersection(int[] a, int[] b) {
+        Set<Integer> setA = new HashSet<>();
+        for (int num : a) setA.add(num);
+        
+        Set<Integer> intersection = new HashSet<>();
+        for (int num : b) {
+            if (setA.contains(num)) {
+                intersection.add(num); // Found common key
+            }
+        }
+        
+        // Convert Set back to array
+        int[] result = new int[intersection.size()];
+        int idx = 0;
+        for (int num : intersection) result[idx++] = num;
+        return result;
+    }
+}
+```
+* **Explanation**: We load all elements of the first array `a` into a `HashSet` named `setA`. We loop through the second array `b`, checking if the elements are present in `setA`. If yes, we write them into a second set (`intersection`) to prevent duplicate listings.
+* **Complexity**: Time: $O(N + M)$, Space: $O(N + K)$ (where $K$ is the size of the intersection).
+
+---
+
+### 31. Move All Zeros to the End of an Array
+**Problem**: Move all zeros present in an integer array to the end in-place, preserving non-zero order.
+```java
+public class MoveZeros {
+    public static void move(int[] nums) {
+        if (nums == null) return;
+        int insertPos = 0;
+        
+        // 1. Move all non-zero elements forward
+        for (int num : nums) {
+            if (num != 0) {
+                nums[insertPos++] = num;
+            }
+        }
+        
+        // 2. Fill the remaining array slots with zeros
+        while (insertPos < nums.length) {
+            nums[insertPos++] = 0;
+        }
+    }
+}
+```
+* **Explanation**: We use a pointer `insertPos` initialized to 0. We iterate through the array. Whenever we find a non-zero number, we write it to index `insertPos` and increment `insertPos`. Finally, we fill all index slots from `insertPos` to the end of the array with 0.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 32. Rotate an Array to the Right by K Steps
+**Problem**: Rotate an array to the right by $K$ steps in-place.
+```java
+public class RotateArray {
+    public static void rotate(int[] nums, int k) {
+        if (nums == null || nums.length == 0) return;
+        k = k % nums.length; // Handle rotation values larger than array size
+        
+        // 1. Reverse the entire array
+        reverse(nums, 0, nums.length - 1);
+        // 2. Reverse the first k elements
+        reverse(nums, 0, k - 1);
+        // 3. Reverse the remaining elements
+        reverse(nums, k, nums.length - 1);
+    }
+
+    private static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+```
+* **Explanation**: An elegant three-step reversal algorithm. E.g. rotating `[1,2,3,4,5]` by `k=2` steps: (1) Reverse all -> `[5,4,3,2,1]`. (2) Reverse first `k` -> `[4,5,3,2,1]`. (3) Reverse rest -> `[4,5,1,2,3]`.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 33. Find the Majority Element in an Array (Boyer-Moore)
+**Problem**: Find the element that appears more than $N/2$ times in an array (Boyer-Moore Voting).
+```java
+public class MajorityElement {
+    public static int getMajority(int[] nums) {
+        int count = 0;
+        Integer candidate = null;
+        
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num; // Select new candidate
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+}
+```
+* **Explanation**: The Boyer-Moore Voting Algorithm. We maintain a `candidate` and a `count`. For every number, if `count` is 0, we set `candidate = num`. If the current number matches `candidate`, we increment `count`; otherwise, we decrement `count`. The majority element will always survive.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 34. Container with Most Water
+**Problem**: Given $N$ non-negative integers representing line heights, find two lines that form a container holding the maximum water volume.
+```java
+public class ContainerWithMostWater {
+    public static int maxArea(int[] height) {
+        int max = 0;
+        int left = 0;
+        int right = height.length - 1;
+        
+        while (left < right) {
+            // Volume = width * height limit
+            int currentHeight = Math.min(height[left], height[right]);
+            int currentWidth = right - left;
+            max = Math.max(max, currentHeight * currentWidth);
+            
+            // Move pointer pointing to the shorter line
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return max;
+    }
+}
+```
+* **Explanation**: We place pointers at boundaries `left` and `right`. We calculate water volume: `width * min(height[left], height[right])`. To find a larger volume, we must shift the pointer that points to the shorter line inward.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 35. Valid Parentheses (Bracket Matching)
+**Problem**: Determine if a string containing characters `(`, `)`, `{`, `}`, `[` and `]` is valid.
+```java
+import java.util.Stack;
+
+public class ValidParentheses {
+    public static boolean isValid(String s) {
+        if (s == null) return false;
+        Stack<Character> stack = new Stack<>();
+        
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c); // Save open brackets
+            } else {
+                if (stack.isEmpty()) return false; // Closing bracket without open
+                
+                char open = stack.pop();
+                if (c == ')' && open != '(') return false;
+                if (c == '}' && open != '{') return false;
+                if (c == ']' && open != '[') return false;
+            }
+        }
+        return stack.isEmpty(); // Ensure all brackets are closed
+    }
+}
+```
+* **Explanation**: We use a `Stack`. When we scan an opening bracket, we push it onto the stack. When we find a closing bracket, we pop the top element from the stack and verify that it matches. If the stack is empty or the brackets mismatch, we return false.
+* **Complexity**: Time: $O(N)$, Space: $O(N)$.
+
+---
+
+### 36. Implement a Queue using Two Stacks
+**Problem**: Design a FIFO (First-In-First-Out) queue class using only two standard LIFO stacks.
+```java
+import java.util.Stack;
+
+public class QueueUsingStacks {
+    private Stack<Integer> s1 = new Stack<>(); // Input stack
+    private Stack<Integer> s2 = new Stack<>(); // Output stack
+
+    public void enqueue(int x) {
+        s1.push(x);
+    }
+
+    public int dequeue() {
+        if (s2.isEmpty()) {
+            // Shift all elements from s1 to s2 to reverse LIFO order into FIFO!
+            while (!s1.isEmpty()) {
+                s2.push(s1.pop());
+            }
+        }
+        if (s2.isEmpty()) {
+            throw new RuntimeException("Queue Empty!");
+        }
+        return s2.pop();
+    }
+}
+```
+* **Explanation**: When adding elements, we push to `s1`. When removing, if `s2` is empty, we pop all elements from `s1` and push them into `s2`. This reverses their order, making the oldest element land at the top of `s2`.
+* **Complexity**: Enqueue: $O(1)$. Dequeue: Amortized $O(1)$ (elements are shifted at most once). Space: $O(N)$.
+
+---
+
+### 37. Merge Two Sorted Linked Lists
+**Problem**: Combine two pre-sorted linked lists into one sorted linked list.
+```java
+public class MergeLinkedLists {
+    public static ListNode merge(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0); // Scratchpad head pointer
+        ListNode current = dummy;
+        
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                current.next = l1;
+                l1 = l1.next;
+            } else {
+                current.next = l2;
+                l2 = l2.next;
+            }
+            current = current.next;
+        }
+        
+        // Link remaining nodes
+        if (l1 != null) current.next = l1;
+        if (l2 != null) current.next = l2;
+        
+        return dummy.next;
+    }
+}
+```
+* **Explanation**: We initialize a `dummy` node to act as the head of the new list. We traverse both lists using pointers. We link the smaller value node to `current.next`, shifting pointers forward, and append leftover nodes at the end.
+* **Complexity**: Time: $O(N + M)$, Space: $O(1)$ (reuse existing nodes).
+
+---
+
+### 38. Remove N-th Node from End of a Linked List
+**Problem**: Remove the N-th node counting backward from the end of a linked list.
+```java
+public class RemoveNthFromEnd {
+    public static ListNode remove(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+        
+        // 1. Move fast pointer N steps ahead
+        for (int i = 0; i <= n; i++) {
+            fast = fast.next;
+        }
+        
+        // 2. Move both pointers together until fast reaches the end
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        
+        // 3. Remove the node
+        slow.next = slow.next.next;
+        
+        return dummy.next;
+    }
+}
+```
+* **Explanation**: We move pointer `fast` exactly `N + 1` nodes ahead. We then advance both `slow` and `fast` pointers at the same speed. When `fast` reaches `null`, the `slow` pointer will be positioned exactly *before* the node to be deleted.
+* **Complexity**: Time: $O(N)$ (single pass), Space: $O(1)$.
+
+---
+
+### 39. Find the Starting Node of a Cycle in a Linked List
+**Problem**: If a linked list contains a loop cycle, find the node where the cycle begins.
+```java
+public class CycleStart {
+    public static ListNode findStart(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        boolean hasCycle = false;
+        
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                hasCycle = true;
+                break;
+            }
+        }
+        
+        if (!hasCycle) return null;
+        
+        // Reset slow to head and move both pointers one step at a time
+        slow = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow; // Cycle start node
+    }
+}
+```
+* **Explanation**: Floyd's Cycle Detection. Once the pointers collide, we reset `slow` to the head of the list. We then advance both `slow` and `fast` pointers one step at a time. The node where they collide again is mathematically guaranteed to be the cycle start.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 40. Check if a Binary Tree is Balanced
+**Problem**: Verify if a binary tree's height difference between left and right subtrees is at most 1 for all nodes.
+```java
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int val) { this.val = val; }
+}
+
+public class BalancedTree {
+    public static boolean isBalanced(TreeNode root) {
+        return getHeight(root) != -1;
+    }
+
+    private static int getHeight(TreeNode node) {
+        if (node == null) return 0;
+        
+        int leftHeight = getHeight(node.left);
+        if (leftHeight == -1) return -1; // Left subtree is unbalanced
+        
+        int rightHeight = getHeight(node.right);
+        if (rightHeight == -1) return -1; // Right subtree is unbalanced
+        
+        // Height difference check
+        if (Math.abs(leftHeight - rightHeight) > 1) {
+            return -1; // Unbalanced
+        }
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+}
+```
+* **Explanation**: We calculate height recursively. If a subtree is unbalanced, we return `-1` to propagate the failure upward immediately. At each node, we check if the difference in heights between `leftHeight` and `rightHeight` exceeds 1.
+* **Complexity**: Time: $O(N)$ (visits every node once), Space: $O(H)$ (where $H$ is the tree height, stack space).
+
+---
+
+### 41. Binary Tree Inorder Traversal (Iterative & Recursive)
+**Problem**: Return the inorder traversal (Left, Root, Right) values of a binary tree.
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+public class TreeInorder {
+    // 1. Recursive
+    public static List<Integer> inorderRecursive(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        helper(root, result);
+        return result;
+    }
+    private static void helper(TreeNode node, List<Integer> res) {
+        if (node == null) return;
+        helper(node.left, res);
+        res.add(node.val);
+        helper(node.right, res);
+    }
+
+    // 2. Iterative (Using Stack)
+    public static List<Integer> inorderIterative(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+        
+        while (current != null || !stack.isEmpty()) {
+            // Walk to the leftmost node
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            result.add(current.val); // Visit node
+            current = current.right;  // Switch to right subtree
+        }
+        return result;
+    }
+}
+```
+* **Explanation**: The recursive method traverses by calling left, printing, then calling right. The iterative method uses a `Stack` to record visited nodes as it walks down to the leftmost leaf, pops, records the value, and switches to the right node.
+* **Complexity**: Time: $O(N)$, Space: $O(N)$.
+
+---
+
+### 42. Maximum Depth of a Binary Tree
+**Problem**: Find the maximum number of nodes along the longest path from the root node down to the farthest leaf node.
+```java
+public class MaxDepthTree {
+    public static int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
+    }
+}
+```
+* **Explanation**: A simple post-order recursion. The maximum depth of a node is $1 +$ the maximum of the depths of its left and right child subtrees.
+* **Complexity**: Time: $O(N)$, Space: $O(H)$ (recursive call stack).
+
+---
+
+### 43. Lowest Common Ancestor (LCA) in a BST
+**Problem**: Find the lowest shared ancestor node of two given nodes in a Binary Search Tree (BST).
+```java
+public class LowestCommonAncestor {
+    public static TreeNode findLCA(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) return null;
+        
+        // 1. Both nodes are on the right side
+        if (p.val > root.val && q.val > root.val) {
+            return findLCA(root.right, p, q);
+        }
+        // 2. Both nodes are on the left side
+        if (p.val < root.val && q.val < root.val) {
+            return findLCA(root.left, p, q);
+        }
+        // 3. Split point found (one node left, one right, or one is root)
+        return root;
+    }
+}
+```
+* **Explanation**: In a BST, keys are sorted. If both target nodes `p` and `q` are larger than the current node, their LCA must reside in the right subtree. If both are smaller, it is in the left. If they lie on opposite sides, the current node is the LCA.
+* **Complexity**: Time: $O(H)$ (travels down a single path), Space: $O(H)$ stack space.
+
+---
+
+### 44. Dynamic Programming: Climbing Stairs
+**Problem**: You are climbing a staircase of $N$ steps. You can climb 1 or 2 steps each time. How many distinct ways can you reach the top?
+```java
+public class ClimbingStairs {
+    public static int countWays(int n) {
+        if (n <= 2) return n;
+        
+        // This is mathematically equivalent to the Fibonacci sequence!
+        int prev2 = 1; // Ways to reach step 1
+        int prev1 = 2; // Ways to reach step 2
+        int current = 0;
+        
+        for (int i = 3; i <= n; i++) {
+            current = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return current;
+    }
+}
+```
+* **Explanation**: To reach step `i`, you must make a 1-step leap from step `i-1` or a 2-step leap from step `i-2`. Therefore, the total ways to reach `i` is the sum of the ways to reach `i-1` and `i-2`, matching the Fibonacci sequence.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 45. Implement a Custom Thread Pool Executor
+**Problem**: Design a simple working thread pool executor class using Java threads.
+```java
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class CustomThreadPool {
+    private final BlockingQueue<Runnable> taskQueue;
+    private final Thread[] workerThreads;
+
+    public CustomThreadPool(int threadCount) {
+        taskQueue = new LinkedBlockingQueue<>();
+        workerThreads = new Thread[threadCount];
+        
+        for (int i = 0; i < threadCount; i++) {
+            workerThreads[i] = new Worker("ThreadPool-Worker-" + i);
+            workerThreads[i].start();
+        }
+    }
+
+    public void execute(Runnable task) {
+        taskQueue.add(task); // Thread-safe queue add
+    }
+
+    private class Worker extends Thread {
+        public Worker(String name) { super(name); }
+        public void run() {
+            while (true) {
+                try {
+                    // take() blocks worker thread if no tasks are available!
+                    Runnable task = taskQueue.take();
+                    task.run();
+                } catch (InterruptedException e) {
+                    break;
+                }
+            }
+        }
+    }
+}
+```
+* **Explanation**: We initialize a thread-safe `BlockingQueue` and spin up $N$ worker threads. Each thread runs a continuous loop. Inside the loop, it calls `taskQueue.take()`. If the queue is empty, the thread goes to sleep automatically (blocks) until a new task is submitted via `execute()`.
+* **Complexity**: Time: $O(1)$ task queue scheduling, Space: $O(M)$ task capacity.
+
+---
+
+### 46. Java 8: Find the First Element of a Stream
+**Problem**: Find the first element of an integer stream.
+```java
+import java.util.List;
+import java.util.Optional;
+
+public class StreamFirstElement {
+    public static Optional<Integer> getFirst(List<Integer> numbers) {
+        return numbers.stream()
+                      .findFirst();
+    }
+}
+```
+* **Explanation**: We call `.findFirst()`, which returns an `Optional` containing the first element of the stream (if present), preventing null exceptions on empty streams.
+* **Complexity**: Time: $O(1)$, Space: $O(1)$.
+
+---
+
+### 47. Java 8: Count Empty Strings in a List
+**Problem**: Count how many empty strings are present in a list of text names.
+```java
+import java.util.List;
+
+public class StreamCountEmpty {
+    public static long countEmpty(List<String> strings) {
+        return strings.stream()
+                      .filter(String::isEmpty)
+                      .count(); // Terminal count operation
+    }
+}
+```
+* **Explanation**: We filter the stream using the method reference `String::isEmpty` and call the terminal operation `.count()` which returns the size of the filtered stream as a `long`.
+* **Complexity**: Time: $O(N)$, Space: $O(1)$.
+
+---
+
+### 48. Java 8: Convert Strings to Uppercase and Join with Commas
+**Problem**: Given a list of strings, convert them all to uppercase and join them into a single comma-separated string.
+```java
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamJoinUpper {
+    public static String convertAndJoin(List<String> input) {
+        return input.stream()
+                    .map(String::toUpperCase) // Transform to upper
+                    .collect(Collectors.joining(", ")); // Join elements
+    }
+}
+```
+* **Explanation**: We map each string to uppercase using `.map(String::toUpperCase)` and use `Collectors.joining(", ")` to concatenate them together with a separator string.
+* **Complexity**: Time: $O(N)$, Space: $O(N)$.
+
+---
+
+### 49. Java 8: Find all Numbers Starting with '1' from a list of integers
+**Problem**: Filter a list of integers returning only those that start with the digit 1.
+```java
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamStartsWithOne {
+    public static List<Integer> filter(List<Integer> numbers) {
+        return numbers.stream()
+                      .map(String::valueOf) // Convert to String
+                      .filter(s -> s.startsWith("1")) // Check prefix
+                      .map(Integer::parseInt) // Convert back to Integer
+                      .collect(Collectors.toList());
+    }
+}
+```
+* **Explanation**: We convert the integers to strings, check if they start with `"1"` using `.startsWith("1")`, parse them back to integers, and collect the outputs into a list.
+* **Complexity**: Time: $O(N)$, Space: $O(N)$.
+
+---
+
+### 50. Java 8: Find the Second Highest Number in a List
+**Problem**: Find the second largest integer in a list of numbers.
+```java
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
+public class StreamSecondHighest {
+    public static Optional<Integer> find(List<Integer> numbers) {
+        return numbers.stream()
+                      .distinct()                     // Remove duplicates
+                      .sorted(Comparator.reverseOrder()) // Sort descending
+                      .skip(1)                        // Skip highest value
+                      .findFirst();                   // Return next value
+    }
+}
+```
+* **Explanation**: We remove duplicate values, sort the stream descending, skip the first record (the maximum), and call `.findFirst()` to retrieve the second largest value safely.
+* **Complexity**: Time: $O(N \log N)$ (due to sorting), Space: $O(N)$.
+
+---
+
 ## ⏭️ Next Steps
 
 * **SQL Interview Guide**: [👉 SQL Practical Coding Interview Guide](../SQL/coding_interview_questions.md)
 * **Roadmap Index**: [🏠 Back to Roadmap](README.md)
+
